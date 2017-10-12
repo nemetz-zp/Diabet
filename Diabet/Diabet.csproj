@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA379046-2B5F-43CC-B9C3-44F99BE3B8E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Diabet</RootNamespace>
+    <AssemblyName>Diabet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Babasse-Old-School-Anti-virus-old-school.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgentSelectForm.Designer.cs">
+      <DependentUpon>AgentSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalizeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalizeListForm.Designer.cs">
+      <DependentUpon>AnalizeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalyzeSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalyzeSelectForm.Designer.cs">
+      <DependentUpon>AnalyzeSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommunesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommunesForm.Designer.cs">
+      <DependentUpon>CommunesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DiabetContext.cs" />
+    <Compile Include="DAL\DiabetDbInitializer.cs" />
+    <Compile Include="ExcelMedicamentNeedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelMedicamentNeedForm.Designer.cs">
+      <DependentUpon>ExcelMedicamentNeedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelReportProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelReportProcessForm.Designer.cs">
+      <DependentUpon>ExcelReportProcessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\PathFinder.cs" />
+    <Compile Include="LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormWaiter.cs" />
+    <Compile Include="MedAgentDozagesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedAgentDozagesForm.Designer.cs">
+      <DependentUpon>MedAgentDozagesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedAssignChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedAssignChangeForm.Designer.cs">
+      <DependentUpon>MedAssignChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedAssignStatisticForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedAssignStatisticForm.Designer.cs">
+      <DependentUpon>MedAssignStatisticForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicamentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicamentForm.Designer.cs">
+      <DependentUpon>MedicamentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicamentListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicamentListForm.Designer.cs">
+      <DependentUpon>MedicamentListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicamentNameSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicamentNameSelectForm.Designer.cs">
+      <DependentUpon>MedicamentNameSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicamentSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicamentSelectForm.Designer.cs">
+      <DependentUpon>MedicamentSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeterForm.Designer.cs">
+      <DependentUpon>MeterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeterSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeterSelectForm.Designer.cs">
+      <DependentUpon>MeterSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AgentDozage.cs" />
+    <Compile Include="Models\Analyze.cs" />
+    <Compile Include="Models\Commune.cs" />
+    <Compile Include="Models\Medicament.cs" />
+    <Compile Include="Models\MedicamentAgent.cs" />
+    <Compile Include="Models\MedicamentAssignation.cs" />
+    <Compile Include="Models\MedicamentMovement.cs" />
+    <Compile Include="Models\MedicamentName.cs" />
+    <Compile Include="Models\MedicamentType.cs" />
+    <Compile Include="Models\Meter.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\PatientAnalyze.cs" />
+    <Compile Include="Models\PatientHistoryRecord.cs" />
+    <Compile Include="Models\ProgramSettings.cs" />
+    <Compile Include="PatientInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientInfoForm.Designer.cs">
+      <DependentUpon>PatientInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EnumVisualizer.cs" />
+    <Compile Include="View\ExcelYearMedicamentNeedView.cs" />
+    <Compile Include="View\MedicamentGroupPatients.cs" />
+    <Compile Include="View\MedicamentTotals.cs" />
+    <Compile Include="View\MedicamentYearSumDozage.cs" />
+    <Compile Include="View\Notificator.cs" />
+    <Compile Include="View\YearMedicamentNeed.cs" />
+    <Compile Include="YearMedicamentsNeedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YearMedicamentsNeedForm.Designer.cs">
+      <DependentUpon>YearMedicamentsNeedForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgentSelectForm.resx">
+      <DependentUpon>AgentSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalizeListForm.resx">
+      <DependentUpon>AnalizeListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalyzeSelectForm.resx">
+      <DependentUpon>AnalyzeSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommunesForm.resx">
+      <DependentUpon>CommunesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelMedicamentNeedForm.resx">
+      <DependentUpon>ExcelMedicamentNeedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelReportProcessForm.resx">
+      <DependentUpon>ExcelReportProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedAgentDozagesForm.resx">
+      <DependentUpon>MedAgentDozagesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedAssignChangeForm.resx">
+      <DependentUpon>MedAssignChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedAssignStatisticForm.resx">
+      <DependentUpon>MedAssignStatisticForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicamentForm.resx">
+      <DependentUpon>MedicamentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicamentListForm.resx">
+      <DependentUpon>MedicamentListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicamentNameSelectForm.resx">
+      <DependentUpon>MedicamentNameSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicamentSelectForm.resx">
+      <DependentUpon>MedicamentSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeterForm.resx">
+      <DependentUpon>MeterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeterSelectForm.resx">
+      <DependentUpon>MeterSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientInfoForm.resx">
+      <DependentUpon>PatientInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YearMedicamentsNeedForm.resx">
+      <DependentUpon>YearMedicamentsNeedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading1-1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Babasse-Old-School-Anti-virus-old-school.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
